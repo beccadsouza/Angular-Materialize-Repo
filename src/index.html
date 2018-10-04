@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Project</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+  <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <script src=”https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+</head>
+<body>
+  <app-root>Loading...</app-root>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+
+
+    $(document).ready(function(){
+
+      let waypoint = new Waypoint({
+        element: document.getElementById('photos'),
+        handler: function (direction) {
+          console.log('Scrolled to waypoint!');
+          $('.nav-wrapper').addClass('black');
+        }
+      });
+
+      $('#change2').click(function () {
+        $('nav#change1').addClass('black');
+      });
+      $('.sidenav').sidenav();
+      $('.materialboxed').materialbox();
+      $('.parallax').parallax();
+      $('.tabs').tabs();
+      $('.datepicker').datepicker({
+        disableWeekends: true,
+        yearRange: 1
+      });
+      $('.tooltipped').tooltip();
+      $('.scrollspy').scrollSpy();
+
+    });
+  </script>
+</body>
+</html>
